@@ -48,7 +48,6 @@ body {
 
 h1 {
     font-size: 36px;
-    margin-bottom: 20px;
 }
 
 .tabs {
@@ -93,8 +92,13 @@ h1 {
     width: 300px;
     margin-right: 60%;
     margin-left: 7%;
+        width: 100%;
+        max-width: 300px; /* Set a maximum width for the input container */
+        margin: 0 auto; /* Center the input container horizontally */
+        padding: 20px; /* Add padding to the input container */
+        box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    }
     
-}
 
 label {
     font-weight: bold;
@@ -144,5 +148,28 @@ button:hover {
     }
     to {
         opacity: 1;
+    }
+}
+
+
+/* Add your existing CSS styles here */
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px; /* Add some padding to the container */
+    }
+
+    .card {
+        width: 80%; /* Make the card width 80% of the viewport width */
+        margin: 0 auto; /* Center the card horizontally */
+    }
+
+    .input-container {
+        width: 100%; /* Make the input container width 100% */
+    }
+
+    .logo {
+        display: none; /* Hide the logo on smaller screens */
     }
 }
