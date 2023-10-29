@@ -32,3 +32,21 @@ document.getElementById('inputValue').addEventListener('keydown', function(event
         convertTemperature();
     }
 });
+
+function convertTemperature(event) {
+    event.preventDefault(); // Prevents the form from refreshing the page
+
+    // Your conversion logic here
+    // For example:
+    var inputValue = document.getElementById("inputValue").value;
+    var resultElement = document.getElementById("result");
+
+    // Perform temperature conversion and update the resultElement.textContent
+    // ...
+
+    // Example conversion (Celsius to Fahrenheit):
+    var celsius = parseFloat(inputValue);
+    var fahrenheit = (celsius * 9/5) + 32;
+
+    resultElement.textContent = `${celsius} Celsius is equal to ${fahrenheit.toFixed(2)} Fahrenheit`;
+}
